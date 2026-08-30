@@ -1,0 +1,15 @@
+febris-simulation-sdk provides a prebuilt DLL with a flat C ABI and no CMake
+targets. Link it the plain way:
+
+    find_path(FEBRIS_SIM_INCLUDE_DIR FebrisSimApi.h)
+    find_library(FEBRIS_SIM_LIBRARY Febris.CppSimulationLibrary)
+    target_include_directories(main PRIVATE ${FEBRIS_SIM_INCLUDE_DIR})
+    target_link_libraries(main PRIVATE ${FEBRIS_SIM_LIBRARY})
+
+vcpkg deploys Febris.CppSimulationLibrary.dll next to your executable in the
+applocal step. Alternatively skip linking entirely and bind at runtime:
+
+    LoadLibrary("Febris.CppSimulationLibrary.dll") + GetProcAddress
+
+Every export is declared in FebrisSimApi.h, which also documents the status
+codes, the buffer convention and the enum values.

@@ -1,0 +1,6 @@
+# Tree-object hashes are load-bearing in a vcpkg git registry: the versions
+# database records the git-tree of each port directory, and vcpkg resolves
+# ports by that hash. Line-ending normalization at add time would change blob
+# hashes and break the recorded trees, so nothing here is ever normalized.
+# All files are authored LF.
+* -text
