@@ -2,7 +2,7 @@
   "name": "febris-simulation-sdk",
   "version": "0.1.0",
   "description": "On-device xAPI statement builder for simulations and games. Prebuilt native SDK with a flat C ABI (FebrisSimApi.h): builds and updates xAPI 1.0.3 statements in-process, no HTTP client and no database, and hands the finished statement to the host application. Byte-parity locked to the C# Febris.Simulation.XApiSdk package.",
-  "homepage": "https://github.com/TRget88/Febris_SDK",
+  "homepage": "https://github.com/Febris-XR/Febris_SDK",
   "license": "Apache-2.0",
   "supports": "windows & x64 & !uwp & !static"
 }

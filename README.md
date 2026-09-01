@@ -2,7 +2,7 @@
 
 A vcpkg git registry serving the native Febris SDK as a package. The port
 installs the prebuilt bundle from the [Febris_SDK GitHub
-Releases](https://github.com/TRget88/Febris_SDK/releases) -- the identical
+Releases](https://github.com/Febris-XR/Febris_SDK/releases) -- the identical
 artifact, pinned by SHA512 -- so `vcpkg install` and a manual download give you
 byte-for-byte the same SDK.
 
@@ -20,7 +20,7 @@ existing default registry:
   "registries": [
     {
       "kind": "git",
-      "repository": "https://github.com/TRget88/Febris_VcpkgRegistry",
+      "repository": "https://github.com/Febris-XR/Febris_VcpkgRegistry",
       "baseline": "<latest commit sha of this repository>",
       "packages": ["febris-simulation-sdk"]
     }
@@ -31,7 +31,7 @@ existing default registry:
 Get the baseline with:
 
 ```
-git ls-remote https://github.com/TRget88/Febris_VcpkgRegistry HEAD
+git ls-remote https://github.com/Febris-XR/Febris_VcpkgRegistry HEAD
 ```
 
 Then depend on it in your `vcpkg.json`:
